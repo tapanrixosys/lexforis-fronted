@@ -1,47 +1,108 @@
-import PropTypes from 'prop-types';
+import React from 'react';
+import { Grid, Box, Typography, TextField, Button, Link } from '@mui/material';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { MailOutlined, LockOutlined } from '@ant-design/icons';
+import companyLogo from "./../../assets/images/icons/componay log.png";
 
-// material-ui
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+export default function AuthPage() {
+  const navigate = useNavigate();  // Initialize the useNavigate hook
 
-// project import
-import AuthFooter from 'components/cards/AuthFooter';
-import Logo from 'components/logo';
-import AuthCard from './AuthCard';
+  const handleRegisterClick = () => {
+    navigate('/register');  // Correctly using navigate here
+  };
 
-// assets
-import AuthBackground from 'assets/images/auth/AuthBackground';
-
-// ==============================|| AUTHENTICATION - WRAPPER ||============================== //
-
-export default function AuthWrapper({ children }) {
   return (
-    <Box sx={{ minHeight: '100vh' }}>
-      <AuthBackground />
-      <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
-        <Grid item xs={12} sx={{ ml: 3, mt: 3 }}>
-          <Logo />
-        </Grid>
-        <Grid item xs={12}>
-          <Grid
-            item
-            xs={12}
-            container
-            justifyContent="center"
-            alignItems="center"
-            sx={{ minHeight: { xs: 'calc(100vh - 210px)', sm: 'calc(100vh - 134px)', md: 'calc(100vh - 112px)' } }}
-          >
-            <Grid item>
-              <AuthCard>{children}</AuthCard>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
-          <AuthFooter />
-        </Grid>
+    <Grid container sx={{ height: '100vh' }}>
+      {/* Left Side (Branding Section) */}
+      <Grid
+        item
+        xs={8}
+        md={8}
+        sx={{
+          backgroundImage: 'url("/path-to-your-background-image.jpg")',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'white',
+          padding: "10px",
+        }}
+      >
+        <Box>
+          <img src={companyLogo} alt="Company Logo" style={{ width: '100px', height: 'auto' }} />
+          <Typography variant="h3" gutterBottom style={{ color: "black" }}>
+            Bienvenido a Ciberconsultores
+          </Typography>
+          <Typography variant="subtitle1" style={{ color: "black" }}>
+            Su gestor en la nube
+          </Typography>
+        </Box>
       </Grid>
-    </Box>
+
+      {/* Right Side (Login Form Section) */}
+      <Grid
+        item
+        xs={12}
+        md={4}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: 5,
+          backgroundColor: 'white',
+        }}
+      >
+        {/* Logo */}
+        <Box sx={{ mb: 2 }}>
+          <img src={companyLogo} alt="Company Logo" style={{ width: '100px', height: 'auto' }} />
+        </Box>
+
+        {/* Email Input */}
+        <TextField
+          label="Email"
+          variant="outlined"
+          fullWidth
+          sx={{ mb: 3 }}
+          InputProps={{
+            endAdornment: <MailOutlined />,
+          }}
+        />
+
+        {/* Password Input */}
+        <TextField
+          label="Password"
+          type="password"
+          variant="outlined"
+          fullWidth
+          sx={{ mb: 3 }}
+          InputProps={{
+            endAdornment: <LockOutlined />,
+          }}
+        />
+
+        {/* Forgot Password Link */}
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', mb: 3 }}>
+          <Link href="#" sx={{ alignSelf: 'flex-start' }}>
+            Forget Password?
+          </Link>
+          <Typography variant="body2">
+            Not a Member? <span onClick={handleRegisterClick} style={{ cursor: 'pointer', color: 'blue' }}>Register Now</span>  {/* Register link updated */}
+          </Typography>
+        </Box>
+
+        {/* Login Button */}
+        <Button variant="contained" color="primary" fullWidth sx={{ mb: 3 }}>
+          Login
+        </Button>
+
+        {/* Create Account Link */}
+        <Button variant="text" fullWidth>
+          Crear una cuenta
+        </Button>
+      </Grid>
+    </Grid>
   );
 }
-
-AuthWrapper.propTypes = { children: PropTypes.node };

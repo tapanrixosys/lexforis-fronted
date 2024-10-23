@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // material-ui
 import List from '@mui/material/List';
@@ -16,11 +17,22 @@ import WalletOutlined from '@ant-design/icons/WalletOutlined';
 
 // ==============================|| HEADER PROFILE - PROFILE TAB ||============================== //
 
-export default function ProfileTab() {
+export default function ProfileTab({ handleLogout }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const navigate = useNavigate();
 
-  const handleListItemClick = (index) => {
+  const handleListItemClick = (event, index, route) => {
     setSelectedIndex(index);
+    if (route) {
+      navigate(route);
+    }
+  };
+
+  const handleLogoutClick = () => {
+    if (handleLogout) {
+      handleLogout(); // Call the logout function passed as a prop if it exists
+    }
+    navigate('/login'); // Navigate to login page
   };
 
   return (
@@ -38,7 +50,7 @@ export default function ProfileTab() {
         <ListItemText primary="View Profile" />
       </ListItemButton>
 
-      <ListItemButton selected={selectedIndex === 3} onClick={(event) => handleListItemClick(event, 3, 'apps/profiles/account/personal')}>
+      <ListItemButton selected={selectedIndex === 3} onClick={(event) => handleListItemClick(event, 3, '/apps/profiles/account/personal')}>
         <ListItemIcon>
           <ProfileOutlined />
         </ListItemIcon>
@@ -50,7 +62,9 @@ export default function ProfileTab() {
         </ListItemIcon>
         <ListItemText primary="Billing" />
       </ListItemButton>
-      <ListItemButton selected={selectedIndex === 2}>
+      
+      {/* Logout Button */}
+      <ListItemButton selected={selectedIndex === 2} onClick={handleLogoutClick}>
         <ListItemIcon>
           <LogoutOutlined />
         </ListItemIcon>
@@ -60,4 +74,6 @@ export default function ProfileTab() {
   );
 }
 
-ProfileTab.propTypes = { handleLogout: PropTypes.func };
+ProfileTab.propTypes = {
+  handleLogout: PropTypes.func,
+};

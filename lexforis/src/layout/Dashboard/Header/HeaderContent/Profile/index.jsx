@@ -124,7 +124,7 @@ export default function Profile() {
                         <Stack direction="row" spacing={1.25} alignItems="center">
                           <Avatar alt="profile user" src={avatar1} sx={{ width: 32, height: 32 }} />
                           <Stack>
-                            <Typography variant="h6">John Doe</Typography>
+                            <Typography variant="h6"> ASHIS MALIK</Typography>
                             <Typography variant="body2" color="text.secondary">
                               UI/UX Designer
                             </Typography>
@@ -142,7 +142,7 @@ export default function Profile() {
                   </CardContent>
 
                   <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="profile tabs">
+                    {/* <Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="profile tabs">
                       <Tab
                         sx={{
                           display: 'flex',
@@ -167,7 +167,7 @@ export default function Profile() {
                         label="Setting"
                         {...a11yProps(1)}
                       />
-                    </Tabs>
+                    </Tabs> */}
                   </Box>
                   <TabPanel value={value} index={0} dir={theme.direction}>
                     <ProfileTab />

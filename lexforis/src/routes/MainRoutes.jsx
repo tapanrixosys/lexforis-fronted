@@ -26,6 +26,7 @@ const MainRoutes = {
       path: 'color',
       element: <Color />
     },
+    
     {
       path: 'dashboard',
       children: [
@@ -47,6 +48,7 @@ const MainRoutes = {
       path: 'typography',
       element: <Typography />
     }
+    
   ]
 };
 
