@@ -10,17 +10,17 @@ const icons = {
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
 
 const pages = {
-  id: 'authentication',
-  title: 'Authentication',
+  id: 'CRM',
+  title: 'CRM',
   type: 'group',
   children: [
     {
       id: 'login1',
-      title: 'Login',
+      title: 'Calander',
       type: 'item',
-      url: '/login',
-      icon: icons.LoginOutlined,
-      target: true
+      url: '/calendar',
+      icon: icons.ProfileOutlined,
+      // target: true
     },
     {
       id: 'register1',
