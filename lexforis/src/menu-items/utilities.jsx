@@ -9,7 +9,7 @@ import {
   UserOutlined,
   TeamOutlined,
 
-  
+
 } from '@ant-design/icons';
 
 // icons
@@ -27,8 +27,8 @@ const icons = {
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
-  id: 'utilities',
-  title: 'Utilities',
+  id: 'Services',
+  title: 'Services',
   type: 'group',
   children: [
     // {
@@ -47,12 +47,28 @@ const utilities = {
     },
     {
       id: 'util-shadow',
+      title: 'Services',
+      type: 'item',
+      url: '/services',
+      icon: icons.BarcodeOutlined
+    }
+    ,
+    {
+      id: 'util-shadow',
       title: 'Companias',
       type: 'item',
       url: '/company',
       icon: icons.BarcodeOutlined
-    }
-,
+    },
+
+    {
+      id: 'util-shadow',
+      title: 'Services',
+      type: 'item',
+      url: '/services',
+      icon: icons.BarcodeOutlined
+    },
+
     {
       id: 'util-shadow ',
       title: 'Administradores',

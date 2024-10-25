@@ -73,22 +73,14 @@ export default function Breadcrumbs({ navigation, title, ...others }) {
     if (item.breadcrumbs !== false) {
       breadcrumbContent = (
         <MainCard border={false} sx={{ mb: 3, bgcolor: 'transparent' }} {...others} content={false}>
-          <Grid container direction="column" justifyContent="flex-start" alignItems="flex-start" spacing={1}>
-            <Grid item>
-              {/* <MuiBreadcrumbs aria-label="breadcrumb">
-                <Typography component={Link} to="/" color="textSecondary" variant="h6" sx={{ textDecoration: 'none' }}>
-                  Home
-                </Typography>
-                {mainContent}
-                {itemContent}
-              </MuiBreadcrumbs> */}
-            </Grid>
+          {/* <Grid container direction="column" justifyContent="flex-start" alignItems="flex-start" spacing={1}>
+           
             {/* {title && (
               <Grid item sx={{ mt: 2 }}>
                 <Typography variant="h5">{item.title}</Typography>
               </Grid>
-            )} */}
-          </Grid>
+            )}
+          </Grid> */}
         </MainCard>
       );
     }

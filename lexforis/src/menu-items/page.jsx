@@ -16,7 +16,7 @@ const pages = {
   children: [
     {
       id: 'login1',
-      title: 'Calander',
+      title: 'Calendar',
       type: 'item',
       url: '/calendar',
       icon: icons.ProfileOutlined,
