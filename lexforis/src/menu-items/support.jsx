@@ -11,14 +11,14 @@ const icons = {
 
 const support = {
   id: 'support',
-  title: 'Support',
+  title: 'Adjust',
   type: 'group',
   children: [
     {
-      id: 'sample-page',
-      title: 'Sample Page',
+      id: 'Ayuda',
+      title: 'Ayuda',
       type: 'item',
-      url: '/sample-page',
+      url: '/ayuda',
       icon: icons.ChromeOutlined
     },
     {

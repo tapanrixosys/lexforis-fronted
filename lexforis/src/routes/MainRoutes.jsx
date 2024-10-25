@@ -5,6 +5,7 @@ import Loadable from 'components/Loadable';
 import Dashboard from 'layout/Dashboard';
 import Calendar from 'pages/Calendar/Calendar';
 import Services from 'pages/Services/Services';
+import Ayuda from 'pages/Ayuda/Ayuda';
 
 const Color = Loadable(lazy(() => import('pages/component-overview/color')));
 import Navbar from 'pages/component-overview/clientNavbar';
@@ -75,6 +76,10 @@ const MainRoutes = {
     {
       path: 'services',
       element: <Services />
+    },
+    {
+      path: 'ayuda',
+      element: <Ayuda />
     }
     
   ]
