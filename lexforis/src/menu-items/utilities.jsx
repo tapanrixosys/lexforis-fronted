@@ -46,7 +46,7 @@ const utilities = {
       icon: icons.UserOutlined
     },
     {
-      id: 'util-shadow',
+      id: 'Services',
       title: 'Services',
       type: 'item',
       url: '/services',
@@ -54,20 +54,20 @@ const utilities = {
     }
     ,
     {
-      id: 'util-shadow',
+      id: 'Companias',
       title: 'Companias',
       type: 'item',
       url: '/company',
       icon: icons.BarcodeOutlined
     },
 
-    {
-      id: 'util-shadow',
-      title: 'Services',
-      type: 'item',
-      url: '/services',
-      icon: icons.BarcodeOutlined
-    },
+    // {
+    //   id: 'util-shadow',
+    //   title: 'Services',
+    //   type: 'item',
+    //   url: '/services',
+    //   icon: icons.BarcodeOutlined
+    // },
 
     {
       id: 'util-shadow ',
