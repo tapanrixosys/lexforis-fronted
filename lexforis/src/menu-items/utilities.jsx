@@ -53,13 +53,13 @@ const utilities = {
       icon: icons.BarcodeOutlined
     }
     ,
-    {
-      id: 'Companias',
-      title: 'Companias',
-      type: 'item',
-      url: '/company',
-      icon: icons.BarcodeOutlined
-    },
+    // {
+    //   id: 'Companias',
+    //   title: 'Companias',
+    //   type: 'item',
+    //   url: '/company',
+    //   icon: icons.BarcodeOutlined
+    // },
 
     // {
     //   id: 'util-shadow',
@@ -69,13 +69,13 @@ const utilities = {
     //   icon: icons.BarcodeOutlined
     // },
 
-    {
-      id: 'util-shadow ',
-      title: 'Administradores',
-      type: 'item',
-      url: '/administradores',
-      icon: icons.TeamOutlined
-    }
+    // {
+    //   id: 'util-shadow ',
+    //   title: 'Administradores',
+    //   type: 'item',
+    //   url: '/administradores',
+    //   icon: icons.TeamOutlined
+    // }
   ]
 };
 
