@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.new-client-btn {
+    background-color: #007bff;
+    color: white;
+    height:40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new-client-btn:hover {
+    background-color: #0056b3;
+}
+
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client-table thead {
+    background-color: #f0f0f0;
+}
+
+.client-table th, .client-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.client-table th {
+    font-weight: bold;
+}
+
+.client-table td {
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.fisica {
+    background-color: #6c757d;
+}
+
+.juridica {
+    background-color: #007bff;
+}
+
+.services-btn {
+    padding: 6px 12px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.services-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.col-margin {
+    margin-left: 10px;
+  }

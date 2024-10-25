@@ -5,7 +5,11 @@ import {
   BarcodeOutlined,
   BgColorsOutlined,
   FontSizeOutlined,
-  LoadingOutlined
+  LoadingOutlined,
+  UserOutlined,
+  TeamOutlined,
+
+  
 } from '@ant-design/icons';
 
 // icons
@@ -15,7 +19,9 @@ const icons = {
   BarcodeOutlined,
   AntDesignOutlined,
   LoadingOutlined,
-  AppstoreAddOutlined
+  AppstoreAddOutlined,
+  UserOutlined,
+  TeamOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
@@ -25,26 +31,34 @@ const utilities = {
   title: 'Utilities',
   type: 'group',
   children: [
-    {
-      id: 'util-typography',
-      title: 'Typography',
-      type: 'item',
-      url: '/typography',
-      icon: icons.FontSizeOutlined
-    },
+    // {
+    //   id: 'util-typography',
+    //   title: 'Calendario',
+    //   type: 'item',
+    //   url: '/typography',
+    //   icon: icons.FontSizeOutlined
+    // },
     {
       id: 'util-color',
-      title: 'Color',
+      title: 'Clientes',
       type: 'item',
-      url: '/color',
-      icon: icons.BgColorsOutlined
+      url: '/client',
+      icon: icons.UserOutlined
     },
     {
       id: 'util-shadow',
-      title: 'Shadow',
+      title: 'Companias',
       type: 'item',
-      url: '/shadow',
+      url: '/company',
       icon: icons.BarcodeOutlined
+    }
+,
+    {
+      id: 'util-shadow ',
+      title: 'Administradores',
+      type: 'item',
+      url: '/administradores',
+      icon: icons.TeamOutlined
     }
   ]
 };

@@ -1,0 +1,37 @@
+.right-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sidebar-content {
+    margin-top: 20px;
+  }
+  
+  .right-sidebar input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .right-sidebar button {
+    margin-top: 10px;
+  }
+  
