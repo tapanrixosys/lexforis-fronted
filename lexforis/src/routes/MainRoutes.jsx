@@ -8,14 +8,15 @@ import Services from 'pages/Services/Services';
 import Ayuda from 'pages/Ayuda/Ayuda';
 
 const Color = Loadable(lazy(() => import('pages/component-overview/color')));
+import Navbar from 'pages/component-overview/clientNavbar';
+import EditInformation from 'pages/component-overview/EditInformation';
+import Administradores from 'pages/component-overview/Administradores';
 const Typography = Loadable(lazy(() => import('pages/component-overview/typography')));
 const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/index')));
 
-// render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
 
-// ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
   path: '/',
@@ -26,9 +27,21 @@ const MainRoutes = {
       element: <DashboardDefault />
     },
     {
-      path: 'color',
+      path: 'client',
       element: <Color />
     },
+
+    {
+      path: 'client-information',
+      element: <Navbar/>
+    },
+
+    {
+      path: 'edit-information value',
+      element: <EditInformation/>
+    },
+    
+    
     
     {
       path: 'dashboard',
@@ -44,9 +57,14 @@ const MainRoutes = {
       element: <SamplePage />
     },
     {
-      path: 'shadow',
+      path: 'company',
       element: <Shadow />
     },
+    {
+      path: 'administradores',
+      element: <Administradores />
+    },
+    
     {
       path: 'typography',
       element: <Typography />
