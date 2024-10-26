@@ -11,17 +11,17 @@ const icons = {
 
 const pages = {
   id: 'CRM',
-  title: 'CRM',
+  title: '',
   type: 'group',
   children: [
-    {
-      id: 'login1',
-      title: 'Calendar',
-      type: 'item',
-      url: '/calendar',
-      icon: icons.ProfileOutlined,
-      // target: true
-    },
+    // {
+    //   id: 'login1',
+    //   title: '',
+    //   type: 'item',
+    //   url: '/calendar',
+    //   icon: icons.ProfileOutlined,
+    
+    // },
     // {
     //   id: 'register1',
     //   title: 'Register',

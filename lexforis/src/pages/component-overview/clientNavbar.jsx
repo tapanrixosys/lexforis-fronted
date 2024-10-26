@@ -86,10 +86,10 @@ export default function LabTabs() {
             <Tab icon={<AppstoreAddOutlined />} label="Servicios" value="2" />
             <Tab icon={<AimOutlined />} label="Exact" value="3" />
           </TabList>
-        </Box>
+        </Box>       
 
         <TabPanel value="1">
-          <Card style={{ marginTop: "20px", width: "100%", height: "auto" }}>
+          <Card style={{ marginTop: "20px", width: "1170px", height: "auto" }}>
             <div>
               <p className='fs-4' style={{ marginLeft: "40px" }}>
                 Informacion del cliente
@@ -176,7 +176,7 @@ export default function LabTabs() {
           </Card>
 
           {/* add two card */}
-          <Card title="Actualizar contraseña" className='mt-4' style={{ width: "100%", height: "200px", paddingLeft: "40px", paddingTop: "20px" }}>
+          <Card title="Actualizar contraseña" className='mt-4' style={{ width: "1170px",  height: "200px", paddingLeft: "40px", paddingTop: "20px" }}>
             <h6>Actualizar contraseña</h6>
             <div className='mt-4'>
               <Row gutter={16}>
@@ -229,9 +229,9 @@ export default function LabTabs() {
               <TabPanel value="10">
 
 
-                <Card style={{ height: "400px", width: "900px" }}>
+                <Card style={{ height: "400px", width: "1000px" }}>
 
-                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "900px", gap: "60px" }}>
+                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "1000px", gap: "60px" }}>
                     {/* Path Text with Search Icon */}
                     <div className="d-flex align-items-center">
                       <FaSearch className="me-2" />
@@ -296,9 +296,9 @@ export default function LabTabs() {
 
               </TabPanel>
               <TabPanel value="11">
-                <Card style={{ height: "400px", width: "900px" }}>
+                <Card style={{ height: "400px", width: "1000px" }}>
 
-                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "900px", gap: "60px" }}>
+                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "1000px", gap: "60px" }}>
                     {/* Path Text with Search Icon */}
                     <div className="d-flex align-items-center">
                       <FaSearch className="me-2" />
@@ -480,9 +480,9 @@ export default function LabTabs() {
 
         <TabPanel value="3">
           {/* Content for Exact tab */}
-          <div style={{ gap: "10px", display: "flex" }}>
+          <div style={{ gap: "30px", display: "flex" }}>
 
-            <Card content={false} style={{ width: "800px" }}>
+            <Card content={false} style={{ width:"100vw" }}>
               <div className='p-2 ' style={{ marginLeft: "20px" }}>
                 <h5>Resumen ano actual comparado con ano anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
               </div >

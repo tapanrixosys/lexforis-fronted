@@ -8,7 +8,7 @@ import {
   LoadingOutlined,
   UserOutlined,
   TeamOutlined,
-
+  ProfileOutlined
 
 } from '@ant-design/icons';
 
@@ -21,23 +21,25 @@ const icons = {
   LoadingOutlined,
   AppstoreAddOutlined,
   UserOutlined,
-  TeamOutlined
+  TeamOutlined,
+  ProfileOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
   id: 'Services',
-  title: 'Services',
+  title: 'CRM',
   type: 'group',
   children: [
-    // {
-    //   id: 'util-typography',
-    //   title: 'Calendario',
-    //   type: 'item',
-    //   url: '/typography',
-    //   icon: icons.FontSizeOutlined
-    // },
+    {
+      id: 'login1',
+      title: 'Calendar',
+      type: 'item',
+      url: '/calendar',
+      icon: icons.ProfileOutlined,
+    
+    },
     {
       id: 'util-color',
       title: 'Clientes',
@@ -45,14 +47,7 @@ const utilities = {
       url: '/client',
       icon: icons.UserOutlined
     },
-    {
-      id: 'Services',
-      title: 'Services',
-      type: 'item',
-      url: '/services',
-      icon: icons.BarcodeOutlined
-    }
-    ,
+    
     {
       id: 'Companias',
       title: 'Companias',
@@ -61,14 +56,7 @@ const utilities = {
       icon: icons.BarcodeOutlined
     },
 
-    // {
-    //   id: 'util-shadow',
-    //   title: 'Services',
-    //   type: 'item',
-    //   url: '/services',
-    //   icon: icons.BarcodeOutlined
-    // },
-
+    
     {
       id: 'util-shadow ',
       title: 'Administradores',
