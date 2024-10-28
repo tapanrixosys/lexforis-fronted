@@ -137,7 +137,7 @@ const headerRender = ({ value, onChange }) => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', padding: '10px 0', width: "200px", margin: "0 auto" }}>
       <LeftOutlined onClick={handlePrevMonth} style={{ fontSize: '16px', cursor: 'pointer' }} />
-      <h3 style={{ margin: 0, width: '130px', textAlign: 'center' }}>{currentMonth}</h3>
+      <h6 style={{ margin: 0, width: '120px', textAlign: 'center' }}>{currentMonth}</h6>
       <RightOutlined onClick={handleNextMonth} style={{ fontSize: '16px', cursor: 'pointer' }} />
     </div>
   );

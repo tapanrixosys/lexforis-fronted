@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Grid, Box, Typography, TextField, Button, InputAdornment, IconButton } from '@mui/material';
-import { MailOutlined, LockOutlined, EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { MailOutlined, UserOutlined, EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import companyLogo from "./../../assets/images/icons/componay log.png";
 
 export default function AuthPage() {
   const navigate = useNavigate();  // Correctly use the navigate hook inside the component
-  
+
   // State to toggle password visibility
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -83,7 +83,9 @@ export default function AuthPage() {
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <MailOutlined />
+                <IconButton >
+                <UserOutlined />
+                </IconButton>
               </InputAdornment>
             ),
           }}
@@ -98,7 +100,9 @@ export default function AuthPage() {
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <MailOutlined />
+                <IconButton >
+                  <MailOutlined />
+                </IconButton>
               </InputAdornment>
             ),
           }}

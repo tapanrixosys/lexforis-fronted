@@ -4,6 +4,11 @@ import { MdAdminPanelSettings } from "react-icons/md";
 import { LuListFilter } from "react-icons/lu";
 import { RiFileSearchFill } from "react-icons/ri";
 import { IoCloseCircle } from "react-icons/io5";
+import { InputGroup, FormControl } from 'react-bootstrap';
+import { FaUser } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
+import { IoCall } from "react-icons/io5";
+
 
 import './admini.css'
 
@@ -36,27 +41,43 @@ const Administradores = () => {
                 <div className="right-sidebar">
 
                     <div onClick={toggleSidebar} className='d-flex justify-content-end'>
-                    <IoCloseCircle size={30} style={{ fontSize: '30px', cursor: 'pointer' }} />                    </div>
+                        <IoCloseCircle size={30} style={{ fontSize: '30px', cursor: 'pointer' }} /></div>
 
                     <div className="sidebar-content">
                         <form>
-                            <div className="mb-3">
-                                <label>Firstname</label>
-                                <input type="text" className="form-control" placeholder="firstname *" />
+                            <div className="mt-4">
+                                <InputGroup  size="lg" className="mb-3">
+                                    <InputGroup.Text>
+                                        <FaUser />
+                                    </InputGroup.Text>
+                                    <FormControl placeholder=" firstname" />
+                                </InputGroup>
                             </div>
-                            <div className="mb-3">
-                                <label>Lastname</label>
-                                <input type="text" className="form-control" placeholder="lastname *" />
+                            <div className="mt-4"  >
+                                <InputGroup   size="lg" className="mb-3">
+                                    <InputGroup.Text>
+                                        <FaUser />
+                                    </InputGroup.Text>
+                                    <FormControl placeholder=" last name" />
+                                </InputGroup>
                             </div>
-                            <div className="mb-3">
-                                <label>phone</label>
-                                <input type="text" className="form-control" placeholder="phone *" />
+                            <div className="mt-4">
+                                <InputGroup  size="lg" className="mb-3" >
+                                    <InputGroup.Text>
+                                        <IoCall />
+                                    </InputGroup.Text>
+                                    <FormControl placeholder="number" />
+                                </InputGroup>
                             </div>
-                            <div className="mb-3">
-                                <label>Email</label>
-                                <input type="email" className="form-control" placeholder="email *" />
+                            <div className="mt-4">
+                                <InputGroup  size="lg" className="mb-3">
+                                    <InputGroup.Text>
+                                        <MdEmail />
+                                    </InputGroup.Text>
+                                    <FormControl placeholder="email" />
+                                </InputGroup>
                             </div>
-                            <Button variant="contained" type="submit" className='d-flex justify-content-center' style={{marginLeft:"20%"}}>
+                            <Button variant="contained" type="submit" className='d-flex justify-content-center' style={{ marginLeft: "20%" }}>
                                 pages.employee.submit_new_employee
                             </Button>
                         </form>

@@ -17,7 +17,7 @@ import { TbFileDownload } from "react-icons/tb";
 import { RiContactsFill } from "react-icons/ri";
 import IncomeAreaChart from './IncomeAreaChart';
 import { Modal, } from 'react-bootstrap';
-import { width } from '@mui/system';
+import { style, width } from '@mui/system';
 
 
 <style jsx="true">{`
@@ -86,7 +86,7 @@ export default function LabTabs() {
             <Tab icon={<AppstoreAddOutlined />} label="Servicios" value="2" />
             <Tab icon={<AimOutlined />} label="Exact" value="3" />
           </TabList>
-        </Box>       
+        </Box>
 
         <TabPanel value="1">
           <Card style={{ marginTop: "20px", width: "1170px", height: "auto" }}>
@@ -124,7 +124,7 @@ export default function LabTabs() {
                     </Button>
                   </Box>
 
-                 
+
                 </TabPanel>
 
                 {/* Tab Panel for "Más información" */}
@@ -176,7 +176,7 @@ export default function LabTabs() {
           </Card>
 
           {/* add two card */}
-          <Card title="Actualizar contraseña" className='mt-4' style={{ width: "1170px",  height: "200px", paddingLeft: "40px", paddingTop: "20px" }}>
+          <Card title="Actualizar contraseña" className='mt-4' style={{ width: "1170px", height: "200px", paddingLeft: "40px", paddingTop: "20px" }}>
             <h6>Actualizar contraseña</h6>
             <div className='mt-4'>
               <Row gutter={16}>
@@ -480,15 +480,15 @@ export default function LabTabs() {
 
         <TabPanel value="3">
           {/* Content for Exact tab */}
-          <div style={{ gap: "30px", display: "flex" }}>
+          <div  className=' d-flex justify-content-between' style={{gap:"30px"}}>
 
-            <Card content={false} style={{ width:"100vw" }}>
+            <Card  style={{width:"1300px"}}>
               <div className='p-2 ' style={{ marginLeft: "20px" }}>
                 <h5>Resumen ano actual comparado con ano anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
               </div >
 
-              <div className="container">
-                <div className="row justify-content-between p-4">
+              <div >
+                <div className="row  p-4">
                   {/* First Column */}
                   <div className="col d-flex" style={{ gap: "30px" }}>
                     <div>
@@ -548,18 +548,18 @@ export default function LabTabs() {
               </Box>
             </Card>
 
-            <div>
+            <div >
               <label className='fs-6 fw-bold'>Reporting balance <br />
                 Ano actual
               </label>
 
-              <Card style={{ width: "240px" }} className='p-4 mt-2'>
+              <Card className='p-4 mt-2' style={{width:"250px"}}>
                 <div>Retenciones</div>
                 <div className='text-danger'>Trimestre actual T3 -1.772,90</div>
                 <div>Total ano     -1.772,90</div>
               </Card>
 
-              <Card style={{ width: "240px" }} className='p-4 mt-2'>
+              <Card className='p-4 mt-2' style={{width:"250px"}}>
                 <div>IVA Repercutido -13.178,987</div>
                 <div>IVA Soportado  -13.178,987</div>
                 <div>IVA compensar 0,00</div>
@@ -567,11 +567,12 @@ export default function LabTabs() {
 
               </Card>
 
-              <Card style={{ width: "240px" }} className='p-4 mt-2'>
+              <Card className='p-4 mt-2' style={{width:"250px"}}>
                 <div>Lunes,30 De Agosto De 2021</div>
                 <div className='text-danger'>Sin eventos</div>
               </Card>
             </div>
+
           </div>
 
 
@@ -580,138 +581,138 @@ export default function LabTabs() {
       </TabContext>
 
 
-       {/* Modal */}
-       <Modal show={show} onHide={handleClose} style={{ marginTop: "30px" }} centered size="lg" dialogClassName="custom-modal-height">
-                    <Modal.Header closeButton>
-                      <Modal.Title>Información del cliente</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
+      {/* Modal */}
+      <Modal show={show} onHide={handleClose} style={{ marginTop: "30px" }} centered size="lg" dialogClassName="custom-modal-height">
+        <Modal.Header closeButton>
+          <Modal.Title>Información del cliente</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
 
-                      <div style={{ height: '400px', overflowY: 'auto' }}>
-                        <Form>
-                          <Row className="mb-3">
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientName" className="mb-3">
-                                <Form.Label>Nombre *</Form.Label>
-                                <Form.Control type="text" defaultValue="CETA IT" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientEmail" className="mb-3">
-                                <Form.Label>Dirección de correo electrónico *</Form.Label>
-                                <Form.Control type="email" defaultValue="ceta@ceta.com" />
-                              </Form.Group>
-                            </Col>
-                          </Row>
+          <div style={{ height: '400px', overflowY: 'auto' }}>
+            <Form>
+              <Row className="mb-3">
+                <Col className="col-margin">
+                  <Form.Group controlId="clientName" className="mb-3">
+                    <Form.Label>Nombre *</Form.Label>
+                    <Form.Control type="text" defaultValue="CETA IT" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientEmail" className="mb-3">
+                    <Form.Label>Dirección de correo electrónico *</Form.Label>
+                    <Form.Control type="email" defaultValue="ceta@ceta.com" />
+                  </Form.Group>
+                </Col>
+              </Row>
 
-                          <Row className="mb-3">
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientPhone" className="mb-3">
-                                <Form.Label>Teléfono</Form.Label>
-                                <Form.Control type="text" defaultValue="111223366" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientCompany" className="mb-3">
-                                <Form.Label>Compañía *</Form.Label>
-                                <Form.Control type="text" defaultValue="Lexforis" />
-                              </Form.Group>
-                            </Col>
-                          </Row>
+              <Row className="mb-3">
+                <Col className="col-margin">
+                  <Form.Group controlId="clientPhone" className="mb-3">
+                    <Form.Label>Teléfono</Form.Label>
+                    <Form.Control type="text" defaultValue="111223366" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientCompany" className="mb-3">
+                    <Form.Label>Compañía *</Form.Label>
+                    <Form.Control type="text" defaultValue="Lexforis" />
+                  </Form.Group>
+                </Col>
+              </Row>
 
-                          <Row className="mb-3">
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientCountry" className="mb-3">
-                                <Form.Label>País</Form.Label>
-                                <Form.Control type="text" defaultValue="España" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientRegion" className="mb-3">
-                                <Form.Label>Estado</Form.Label>
-                                <Form.Control type="text" defaultValue="Murcia" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientCity" className="mb-3">
-                                <Form.Label>Ciudad</Form.Label>
-                                <Form.Control type="text" defaultValue="Cartagena" />
-                              </Form.Group>
-                            </Col>
-                          </Row>
+              <Row className="mb-3">
+                <Col className="col-margin">
+                  <Form.Group controlId="clientCountry" className="mb-3">
+                    <Form.Label>País</Form.Label>
+                    <Form.Control type="text" defaultValue="España" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientRegion" className="mb-3">
+                    <Form.Label>Estado</Form.Label>
+                    <Form.Control type="text" defaultValue="Murcia" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientCity" className="mb-3">
+                    <Form.Label>Ciudad</Form.Label>
+                    <Form.Control type="text" defaultValue="Cartagena" />
+                  </Form.Group>
+                </Col>
+              </Row>
 
-                          <Row className="mb-3">
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientPostalCode" className="mb-3">
-                                <Form.Label>Código Postal</Form.Label>
-                                <Form.Control type="text" defaultValue="30394" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientID" className="mb-3">
-                                <Form.Label>Identificación</Form.Label>
-                                <Form.Control type="text" defaultValue="model.client.identification" />
-                              </Form.Group>
-                            </Col>
-                            <Col className="col-margin">
-                              <Form.Group controlId="clientIban" className="mb-3">
-                                <Form.Label>IBAN</Form.Label>
-                                <Form.Control type="text" defaultValue="model.client.iban" />
-                              </Form.Group>
-                            </Col>
-                          </Row>
-                        </Form>
+              <Row className="mb-3">
+                <Col className="col-margin">
+                  <Form.Group controlId="clientPostalCode" className="mb-3">
+                    <Form.Label>Código Postal</Form.Label>
+                    <Form.Control type="text" defaultValue="30394" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientID" className="mb-3">
+                    <Form.Label>Identificación</Form.Label>
+                    <Form.Control type="text" defaultValue="model.client.identification" />
+                  </Form.Group>
+                </Col>
+                <Col className="col-margin">
+                  <Form.Group controlId="clientIban" className="mb-3">
+                    <Form.Label>IBAN</Form.Label>
+                    <Form.Control type="text" defaultValue="model.client.iban" />
+                  </Form.Group>
+                </Col>
+              </Row>
+            </Form>
 
-                      <Card title="Actualizar contraseña" className='mt-4' style={{ width: "100%", height: "200px", paddingLeft: "10px", paddingTop: "20px" }}>
-                        <h6>Actualizar contraseña</h6>
-                        <div className='mt-4'>
-                          <Row gutter={16}>
-                            <Col span={11}>
-                              <Input.Password
-                                placeholder="Nueva contraseña *"
-                                prefix={<KeyOutlined />}
-                                iconRender={visible => (visible ? <EyeOutlined /> : <EyeInvisibleOutlined />)}
-                                style={{ width: '100%', padding: '10px' }}
-                                onChange={(e) => setPassword(e.target.value)}
-                              />
-                            </Col>
-                            <Col span={11}>
-                              <Input.Password
-                                placeholder="Confirmar nueva contraseña *"
-                                prefix={<LockOutlined />}
-                                iconRender={visible => (visible ? <EyeOutlined /> : <EyeInvisibleOutlined />)}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                style={{ width: '100%', padding: '10px' }}
-                              />
-                            </Col>
-                          </Row>
-                        </div>
+            <Card title="Actualizar contraseña" className='mt-4' style={{ width: "100%", height: "200px", paddingLeft: "10px", paddingTop: "20px" }}>
+              <h6>Actualizar contraseña</h6>
+              <div className='mt-4'>
+                <Row gutter={16}>
+                  <Col span={11}>
+                    <Input.Password
+                      placeholder="Nueva contraseña *"
+                      prefix={<KeyOutlined />}
+                      iconRender={visible => (visible ? <EyeOutlined /> : <EyeInvisibleOutlined />)}
+                      style={{ width: '100%', padding: '10px' }}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </Col>
+                  <Col span={11}>
+                    <Input.Password
+                      placeholder="Confirmar nueva contraseña *"
+                      prefix={<LockOutlined />}
+                      iconRender={visible => (visible ? <EyeOutlined /> : <EyeInvisibleOutlined />)}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      style={{ width: '100%', padding: '10px' }}
+                    />
+                  </Col>
+                </Row>
+              </div>
 
-                        <Row style={{ marginTop: '20px' }}>
-                          <Col span={24}>
-                            <Checkbox onChange={handleCheckboxChange}>Notificar el cambio por correo electrónico</Checkbox>
-                          </Col>
-                        </Row>
+              <Row style={{ marginTop: '20px' }}>
+                <Col span={24}>
+                  <Checkbox onChange={handleCheckboxChange}>Notificar el cambio por correo electrónico</Checkbox>
+                </Col>
+              </Row>
 
-                        <Row>
-                          <Button variant="contained" sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, marginLeft: "66%" }} icon={<KeyOutlined />} disabled={isButtonDisabled}>
-                            Cambiar contraseña
-                          </Button>
-                        </Row>
-                      </Card>
-                      </div>
+              <Row>
+                <Button variant="contained" sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, marginLeft: "66%" }} icon={<KeyOutlined />} disabled={isButtonDisabled}>
+                  Cambiar contraseña
+                </Button>
+              </Row>
+            </Card>
+          </div>
 
 
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <Button variant="contained" className='bg-danger text-white' onClick={handleClose}>
-                        Cancelar
-                      </Button>
-                      <Button variant="contained" className='bg-primary text-white' onClick={handleClose}>
-                        Actualiazar
-                      </Button>
-                    </Modal.Footer>
-                  </Modal>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="contained" className='bg-danger text-white' onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button variant="contained" className='bg-primary text-white' onClick={handleClose}>
+            Actualiazar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Box >
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grid, Box, Typography, TextField, Button, Link } from '@mui/material';
+import { Grid, Box, Typography, TextField, Button, Link, InputAdornment, IconButton } from '@mui/material'; // Import InputAdornment
 import { Link as RouterLink, useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
-import { MailOutlined, LockOutlined } from '@ant-design/icons';
+import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons'; // Include UserOutlined for the candidate icon
 import companyLogo from "./../../assets/images/icons/componay log.png";
 
 export default function AuthPage() {
@@ -67,7 +67,13 @@ export default function AuthPage() {
           fullWidth
           sx={{ mb: 3 }}
           InputProps={{
-            endAdornment: <MailOutlined />,
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton>
+                  <UserOutlined /> {/* Candidate icon */}
+                </IconButton>
+              </InputAdornment>
+            ),
           }}
         />
 
@@ -79,7 +85,13 @@ export default function AuthPage() {
           fullWidth
           sx={{ mb: 3 }}
           InputProps={{
-            endAdornment: <LockOutlined />,
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton>
+                  <LockOutlined />
+                </IconButton>
+              </InputAdornment>
+            ),
           }}
         />
 
@@ -89,7 +101,7 @@ export default function AuthPage() {
             Forget Password?
           </Link>
           <Typography variant="body2">
-            Not a Member? <span onClick={handleRegisterClick} style={{ cursor: 'pointer', color: 'blue' }}>Register Now</span>  {/* Register link updated */}
+            Not a Member? <span onClick={handleRegisterClick} style={{ cursor: 'pointer', color: 'blue' }}>Register Now</span>
           </Typography>
         </Box>
 
