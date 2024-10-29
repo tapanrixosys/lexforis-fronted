@@ -69,11 +69,9 @@ const Traducciones = () => {
                     </div>
                 </div>
 
-                <div className="d-flex align-items-center justify-content-between mt-4  p-3 bg-dark text-white">
-
-                    <div className='d-flex align-items-center'>
-
-                        <InputGroup className="me-3" style={{ width: '400px' }}>
+                <div className="d-flex flex-wrap align-items-center justify-content-between mt-4 p-3 bg-dark text-white">
+                    <div className="d-flex  align-items-center mb-2 mb-md-0">
+                        <InputGroup className="me-3" style={{ width: '100%', maxWidth: '300px' }}>
                             <Form.Control
                                 placeholder="Search"
                                 aria-label="Search label name"
@@ -83,19 +81,16 @@ const Traducciones = () => {
                         <Badge bg="success" className="me-3 p-2">461 Traducciones</Badge>
                     </div>
 
-                    <div>
-                        <Button variant="light" className="me-2">
+                    <div className="d-flex flex-wrap">
+                        <Button variant="light" className="me-2 mb-2 mb-md-0">
                             Abrir todas
                         </Button>
-
-                        <Button variant="light" className="me-2">
+                        <Button variant="light" className="me-2 mb-2 mb-md-0">
                             <FaCloudUploadAlt /> Subir Excel
                         </Button>
-
-                        <Button variant="light">
+                        <Button variant="light" className="mb-2 mb-md-0">
                             <FaDownload /> Descarga Excel
                         </Button>
-
                     </div>
                 </div>
 
@@ -116,79 +111,33 @@ const Traducciones = () => {
                                 ) : (
                                     <Box className='px-4' >
 
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
+                                        <div>
+                                            {[...Array(3)].map((_, index) => (
+                                                <div key={index} className="row align-items-center mb-3 gx-3">
+                                                    <div className="col-12 col-md-6 d-flex align-items-center">
+                                                        <TextField
+                                                            id={`key-${index}`}
+                                                            label="Key"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdContentCopy size={25} />
+                                                        </span>
+                                                    </div>
+                                                    <div className="col-12 col-md-6 d-flex align-items-center mt-3 mt-md-0">
+                                                        <TextField
+                                                            id={`text-${index}`}
+                                                            label="Text"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdDeleteOutline size={25} className="text-danger" />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
 
                                     </Box>
@@ -212,79 +161,33 @@ const Traducciones = () => {
                                 ) : (
                                     <Box className='px-4' >
 
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
+<div>
+                                            {[...Array(3)].map((_, index) => (
+                                                <div key={index} className="row align-items-center mb-3 gx-3">
+                                                    <div className="col-12 col-md-6 d-flex align-items-center">
+                                                        <TextField
+                                                            id={`key-${index}`}
+                                                            label="Key"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdContentCopy size={25} />
+                                                        </span>
+                                                    </div>
+                                                    <div className="col-12 col-md-6 d-flex align-items-center mt-3 mt-md-0">
+                                                        <TextField
+                                                            id={`text-${index}`}
+                                                            label="Text"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdDeleteOutline size={25} className="text-danger" />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
 
                                     </Box>
@@ -310,79 +213,33 @@ const Traducciones = () => {
                                 ) : (
                                     <Box className='px-4' >
 
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
-                                        </div>
-
-                                        <div className='d-flex align-items-center  ' style={{ gap: "20px" }}>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="key"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdContentCopy size={25} /></span>
-
-                                            </div>
-
-                                            <div className='d-flex align-items-center '>
-
-                                                <TextField
-                                                    id="standard-basic"
-                                                    label="Text"
-                                                    variant="standard"
-                                                    style={{ width: '550px' }}
-                                                /><span className='mt-2'><MdDeleteOutline size={25} className='text-danger' /></span>
-
-                                            </div>
+<div>
+                                            {[...Array(3)].map((_, index) => (
+                                                <div key={index} className="row align-items-center mb-3 gx-3">
+                                                    <div className="col-12 col-md-6 d-flex align-items-center">
+                                                        <TextField
+                                                            id={`key-${index}`}
+                                                            label="Key"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdContentCopy size={25} />
+                                                        </span>
+                                                    </div>
+                                                    <div className="col-12 col-md-6 d-flex align-items-center mt-3 mt-md-0">
+                                                        <TextField
+                                                            id={`text-${index}`}
+                                                            label="Text"
+                                                            variant="standard"
+                                                            fullWidth
+                                                        />
+                                                        <span className="mt-2 ms-2">
+                                                            <MdDeleteOutline size={25} className="text-danger" />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
 
                                     </Box>
