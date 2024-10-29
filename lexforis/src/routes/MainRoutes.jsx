@@ -11,6 +11,7 @@ const Color = Loadable(lazy(() => import('pages/component-overview/color')));
 import Navbar from 'pages/component-overview/clientNavbar';
 import EditInformation from 'pages/component-overview/EditInformation';
 import Administradores from 'pages/component-overview/Administradores';
+import Traducciones from 'pages/component-overview/Traducciones';
 const Typography = Loadable(lazy(() => import('pages/component-overview/typography')));
 const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/index')));
@@ -29,7 +30,7 @@ const MainRoutes = {
     {
       path: 'client',
       element: <Color />
-    },
+    }, 
 
     {
       path: 'client-information',
@@ -63,6 +64,10 @@ const MainRoutes = {
     {
       path: 'administradores',
       element: <Administradores />
+    },
+    {
+      path: 'translations',
+      element: <Traducciones />
     },
     
     {

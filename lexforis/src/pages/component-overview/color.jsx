@@ -55,7 +55,7 @@ export default function ComponentColor() {
         </thead>
         <tbody>
           <tr>
-            <td>asd asd</td>
+            <td onClick={handleNavigate} style={{cursor:"pointer"}}>asd asd</td>
             <td>
               <span className="badge fisica">Física</span>
             </td>
@@ -64,7 +64,7 @@ export default function ComponentColor() {
             </td>
           </tr>
           <tr>
-            <td>ASDASD Blekacemi</td>
+            <td onClick={handleNavigate} style={{cursor:"pointer"}}>ASDASD Blekacemi</td>
             <td>
               <span className="badge fisica">Física</span>
             </td>
@@ -73,7 +73,7 @@ export default function ComponentColor() {
             </td>
           </tr>
           <tr>
-            <td>Jose Jose</td>
+            <td onClick={handleNavigate} style={{cursor:"pointer"}}>Jose Jose</td>
             <td>
               <span className="badge fisica">Física</span>
             </td>
@@ -82,7 +82,7 @@ export default function ComponentColor() {
             </td>
           </tr>
           <tr>
-            <td>CETA IT</td>
+            <td onClick={handleNavigate} style={{cursor:"pointer"}}>CETA IT</td>
             <td>
               <span className="badge juridica">Jurídica</span>
             </td>

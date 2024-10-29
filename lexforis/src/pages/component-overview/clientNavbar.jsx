@@ -479,104 +479,71 @@ export default function LabTabs() {
         </TabPanel>
 
         <TabPanel value="3">
-          {/* Content for Exact tab */}
-          <div  className=' d-flex justify-content-between' style={{gap:"30px"}}>
+  {/* Content for Exact tab */}
+  <div style={{width:"1100px"}}>
+    <div className="row">
+      {/* Left Column with Main Card */}
+      <div className="col-12 col-lg-8">
 
-            <Card  style={{width:"1300px"}}>
-              <div className='p-2 ' style={{ marginLeft: "20px" }}>
-                <h5>Resumen ano actual comparado con ano anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
-              </div >
-
-              <div >
-                <div className="row  p-4">
-                  {/* First Column */}
-                  <div className="col d-flex" style={{ gap: "30px" }}>
-                    <div>
-
-                      <div>2021</div>
-                      <div>2020</div>
-                      <div className="text-danger">period 8-2021</div>
-                      <div>period 8-2021</div>
-                    </div>
-                    <div>
-                      <div>20233231</div>
-                      <div>2023433220</div>
-                      <div className="text-danger">999921</div>
-                      <div>00987771</div>
-                    </div>
-                  </div>
-
-                  {/* Second Column */}
-                  <div className="col d-flex" style={{ gap: "30px" }}>
-                    <div>
-                      <div>2021</div>
-                      <div>2020</div>
-                      <div className="text-danger">period 8-2021</div>
-                      <div>period 8-2021</div>
-                    </div>
-                    <div>
-                      <div>20233231</div>
-                      <div>2023433220</div>
-                      <div className="text-danger">999921</div>
-                      <div>00987771</div>
-                    </div>
-                  </div>
-
-                  {/* Third Column */}
-                  <div className="col d-flex" style={{ gap: "30px" }}>
-                    <div>
-                      <div>2021</div>
-                      <div>2020</div>
-                      <div className="text-danger">period 8-2021</div>
-                      <div>period 8-2021</div>
-                    </div>
-                    <div>
-                      <div>20233231</div>
-                      <div>2023433220</div>
-                      <div className="text-danger">999921</div>
-                      <div>00987771</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-              <Box sx={{ pt: 1, pr: 2 }}>
-                <IncomeAreaChart slot={slot} />
-              </Box>
-            </Card>
-
-            <div >
-              <label className='fs-6 fw-bold'>Reporting balance <br />
-                Ano actual
-              </label>
-
-              <Card className='p-4 mt-2' style={{width:"250px"}}>
-                <div>Retenciones</div>
-                <div className='text-danger'>Trimestre actual T3 -1.772,90</div>
-                <div>Total ano     -1.772,90</div>
-              </Card>
-
-              <Card className='p-4 mt-2' style={{width:"250px"}}>
-                <div>IVA Repercutido -13.178,987</div>
-                <div>IVA Soportado  -13.178,987</div>
-                <div>IVA compensar 0,00</div>
-                <div className='text-damger'>Resultado T3 7.426,81</div>
-
-              </Card>
-
-              <Card className='p-4 mt-2' style={{width:"250px"}}>
-                <div>Lunes,30 De Agosto De 2021</div>
-                <div className='text-danger'>Sin eventos</div>
-              </Card>
-            </div>
-
+        <Card className="w-100" style={{ maxWidth: "100%" }}>
+          <div className="p-2" style={{ marginLeft: "20px" }}>
+            <h5>Resumen año actual comparado con año anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
           </div>
 
+          <div className="container-fluid">
+            <div className="row p-4">
+              {/* Columns with data */}
+              {[...Array(3)].map((_, idx) => (
+                <div key={idx} className="col-12 col-md-4 d-flex" style={{ gap: "15px" }}>
+                  <div>
+                    <div>2021</div>
+                    <div>2020</div>
+                    <div className="text-danger">period 8-2021</div>
+                    <div>period 8-2021</div>
+                  </div>
+                  <div>
+                    <div>20233231</div>
+                    <div>2023433220</div>
+                    <div className="text-danger">999921</div>
+                    <div>00987771</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        </TabPanel>
+          <Box sx={{ pt: 1, pr: 2 }}>
+            <IncomeAreaChart slot={slot} />
+          </Box>
+        </Card>
+        
+      </div>
+
+      {/* Right Column with Small Cards */}
+      <div className="col-12 col-lg-4 mt-3 mt-lg-0">
+        <div className="d-flex flex-column gap-3">
+          <label className="fs-6 fw-bold">Reporting balance <br /> Año actual</label>
+
+          {[ 
+            { title: "Retenciones", details: ["Trimestre actual T3 -1.772,90", "Total año -1.772,90"] },
+            { title: "IVA Repercutido -13.178,987", details: ["IVA Soportado -13.178,987", "IVA compensar 0,00", "Resultado T3 7.426,81"], danger: true },
+            { title: "Lunes, 30 De Agosto De 2021", details: ["Sin eventos"], danger: true }
+          ].map((card, idx) => (
+            <Card key={idx} className="p-4" style={{ width: "100%", maxWidth: "250px" }}>
+              <div>{card.title}</div>
+              {card.details.map((detail, dIdx) => (
+                <div key={dIdx} className={dIdx === card.details.length - 1 && card.danger ? "text-danger" : ""}>
+                  {detail}
+                </div>
+              ))}
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</TabPanel>
+
 
       </TabContext>
 

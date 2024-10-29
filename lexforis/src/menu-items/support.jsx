@@ -22,14 +22,12 @@ const support = {
       icon: icons.ChromeOutlined
     },
     {
-      id: 'traducciones',
+      id: 'Traducciones',
       title: 'Traducciones',
       type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
-      icon: icons.QuestionOutlined,
-      external: true,
-      target: true
-    }
+      url: '/translations',
+      icon: icons.QuestionOutlined
+    }, 
   ]
 };
 
