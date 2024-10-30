@@ -75,6 +75,7 @@ export default function DashboardDefault() {
       <Grid item xs={12} md={7} lg={8}>
         <UniqueVisitorCard />
       </Grid>
+
       <Grid item xs={12} md={5} lg={4}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -95,6 +96,8 @@ export default function DashboardDefault() {
         </MainCard>
       </Grid>
 
+
+
       {/* row 3 */}
       <Grid item xs={12} md={7} lg={8}>
         <Grid container alignItems="center" justifyContent="space-between">
@@ -107,6 +110,7 @@ export default function DashboardDefault() {
           <OrdersTable />
         </MainCard>
       </Grid>
+
       <Grid item xs={12} md={5} lg={4}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -137,6 +141,7 @@ export default function DashboardDefault() {
       <Grid item xs={12} md={7} lg={8}>
         <SaleReportCard />
       </Grid>
+      
       <Grid item xs={12} md={5} lg={4}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -241,6 +246,8 @@ export default function DashboardDefault() {
           </Stack>
         </MainCard>
       </Grid>
+
+
     </Grid>
   );
 }

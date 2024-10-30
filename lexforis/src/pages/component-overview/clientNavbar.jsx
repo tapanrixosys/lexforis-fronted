@@ -17,7 +17,7 @@ import { TbFileDownload } from "react-icons/tb";
 import { RiContactsFill } from "react-icons/ri";
 import IncomeAreaChart from './IncomeAreaChart';
 import { Modal, } from 'react-bootstrap';
-import { style, width } from '@mui/system';
+import { padding, style, width } from '@mui/system';
 
 
 <style jsx="true">{`
@@ -108,7 +108,7 @@ export default function LabTabs() {
 
                 {/* Tab Panel for "Datos principales" */}
                 <TabPanel value="1" style={{ height: '200px', overflowY: 'auto' }}>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}  className='p-4'>
                     <Button variant="outlined">Nombre:<br /> CETA IT</Button>
                     <Button variant="outlined">Representante 1:<br /> Represent Represent (Administrador)</Button>
                     <Button variant="outlined">Representante 2:<br /> Diego Alhama Sánchez (Apoderado)</Button>
@@ -116,9 +116,9 @@ export default function LabTabs() {
                     <Button variant="outlined">Teléfono:<br /> 111223366</Button>
                     <Button variant="outlined">Idioma:<br /> es</Button>
                     <Button variant="outlined">Compañía:<br /> Lexforis</Button>
-                  </Box>
+                  </Box> 
 
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, marginLeft: '70%', marginTop: '50px' }}>
+                  <Box className='d-flex justify-content-end' style={{ marginTop: "40px" }}>
                     <Button variant="contained" onClick={handleShow}>
                       <EditOutlined /> <span style={{ marginLeft: "10px" }} onClick={handleShow}> Editar información</span>
                     </Button>
@@ -129,7 +129,7 @@ export default function LabTabs() {
 
                 {/* Tab Panel for "Más información" */}
                 <TabPanel value="5" style={{ height: '200px', overflowY: 'auto' }}>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}  className='p-4'>
                     <Button variant="outlined">Representante 1:<br /> Represent Represent (Administrador)</Button>
                     <Button variant="outlined">Dirección de residencia<br /> Sin datos</Button>
                     <Button variant="outlined">Persona física 1:<br /> Paco Moreno</Button>
@@ -138,7 +138,7 @@ export default function LabTabs() {
                     <Button variant="outlined">Compañía:<br /> Lexforis</Button>
                   </Box>
 
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'flex-end' }}>
+                  <Box className='d-flex justify-content-end' style={{ marginTop: "40px" }}>
                     <Button variant="contained">
                       <EditOutlined /> <span style={{ marginLeft: "10px" }} onClick={handleShow}> Editar información</span>
                     </Button>
@@ -147,12 +147,12 @@ export default function LabTabs() {
 
                 {/* Tab Panel for "Representantes" */}
                 <TabPanel value="3" style={{ height: '200px', overflowY: 'auto' }}>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}  className='p-4'>
                     <Button variant="outlined">Representante 1:<br /> Represent Represent (Administrador)</Button>
                     <Button variant="outlined">Representante 2:<br /> Diego Alhama Sánchez (Apoderado)</Button>
                   </Box>
 
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'flex-end' }}>
+                  <Box className='d-flex justify-content-end' style={{ marginTop: "40px" }}>
                     <Button variant="contained">
                       <EditOutlined /> <span style={{ marginLeft: "10px" }} onClick={handleShow}> Editar información</span>
                     </Button>
@@ -161,11 +161,11 @@ export default function LabTabs() {
 
                 {/* Tab Panel for "Personas físicas" */}
                 <TabPanel value="4" style={{ height: '200px', overflowY: 'auto' }}>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}  className='p-4'>
                     <Button variant="outlined">Persona 1:<br />Paco Moreno</Button>
                   </Box>
 
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'flex-end' }}>
+                  <Box className='d-flex justify-content-end' style={{ marginTop: "40px" }}>
                     <Button variant="contained">
                       <EditOutlined /> <span style={{ marginLeft: "10px" }} onClick={handleShow}> Editar información</span>
                     </Button>
@@ -226,19 +226,17 @@ export default function LabTabs() {
                   <Tab label="pages.clients.services.accounting.tab_invoices" value="12" />
                 </TabList>
               </Box>
+
+
               <TabPanel value="10">
+                <Card style={{ height: "400px", width: "1230px", }} className='css-13xfq8m-MuiTabPanel-root mt-4'>
 
-
-                <Card style={{ height: "400px", width: "1000px" }}>
-
-                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "1000px", gap: "60px" }}>
-                    {/* Path Text with Search Icon */}
-                    <div className="d-flex align-items-center">
-                      <FaSearch className="me-2" />
+                  <div className="d-flex align-items-center justify-content-between p-3 bg-dark  text-white" style={{ width: "1230px", }}>
+                    <div className="d-flex align-items-center  ">
+                      <FaSearch className="me-4" />
                       <span>pages.services.accounting</span>
                     </div>
 
-                    {/* Search Input */}
                     <InputGroup className="w-25">
                       <Form.Control
                         type="text"
@@ -250,8 +248,7 @@ export default function LabTabs() {
                       </InputGroup.Text>
                     </InputGroup>
 
-                    {/* Clear Filter and Filter Button */}
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center gap-3">
                       <Button variant="outlined" className="text-white me-3">
                         <FaEraser className="me-1" /> Limpiar filtro
                       </Button>
@@ -285,27 +282,21 @@ export default function LabTabs() {
                       </tr>
                     </thead>
                     <tbody>
-                      {/* <tr>
-                       <th scope="row">1</th>
-                       <td>Mark</td>
-                       </tr> */}
+
                     </tbody>
                   </table>
                 </Card>
-
-
               </TabPanel>
-              <TabPanel value="11">
-                <Card style={{ height: "400px", width: "1000px" }}>
 
-                  <div className="d-flex align-items-center  p-3 bg-dark  text-white" style={{ width: "1000px", gap: "60px" }}>
-                    {/* Path Text with Search Icon */}
-                    <div className="d-flex align-items-center">
-                      <FaSearch className="me-2" />
-                      <span>info.upload.uploaded_files</span>
+              <TabPanel value="11">
+                <Card style={{ height: "400px", width: "1230px", }} className='css-13xfq8m-MuiTabPanel-root mt-4'>
+
+                  <div className="d-flex align-items-center justify-content-between p-3 bg-dark  text-white" style={{ width: "1230px", }}>
+                    <div className="d-flex align-items-center  ">
+                      <FaSearch className="me-4" />
+                      <span>pages.services.accounting</span>
                     </div>
 
-                    {/* Search Input */}
                     <InputGroup className="w-25">
                       <Form.Control
                         type="text"
@@ -317,8 +308,7 @@ export default function LabTabs() {
                       </InputGroup.Text>
                     </InputGroup>
 
-                    {/* Clear Filter and Filter Button */}
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center gap-3">
                       <Button variant="outlined" className="text-white me-3">
                         <FaEraser className="me-1" /> Limpiar filtro
                       </Button>
@@ -348,31 +338,21 @@ export default function LabTabs() {
                     <thead>
                       <tr>
                         <th scope="col">ID Nombre</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Nombre</th>
-
+                        <th scope="col">Fetch</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {/* <tr>
-     <th scope="row">1</th>
-     <td>Mark</td>
-     </tr> */}
+
                     </tbody>
                   </table>
                 </Card>
               </TabPanel>
 
-
-
-
               <TabPanel value="12">
-
-
                 <div className="d-flex  align-items-center " style={{ gap: "20px" }}>
 
-                  <div >
-                    <Card style={{ width: "500px", height: "200px" }}>
+                  <div className='mt-4'>
+                    <Card style={{ width: "500px", height: "200px" }} >
 
                       <div className=" d-flex justify-content-center align-items-center">
                         <div >
@@ -398,15 +378,11 @@ export default function LabTabs() {
                           </div>
                         </div>
                       </div>
-
-
-
-
                     </Card>
                   </div>
 
                   <div >
-                    <Card style={{ width: "500px", height: "200px" }}>
+                    <Card style={{ width: "500px", height: "200px" }} className='mt-4'>
 
                       <div className=" d-flex justify-content-center align-items-center">
                         <div >
@@ -474,75 +450,75 @@ export default function LabTabs() {
 
 
               </TabPanel>
+
             </TabContext>
           </Box>
         </TabPanel>
 
         <TabPanel value="3">
-  {/* Content for Exact tab */}
-  <div style={{width:"1100px"}}>
-    <div className="row">
-      {/* Left Column with Main Card */}
-      <div className="col-12 col-lg-8">
 
-        <Card className="w-100" style={{ maxWidth: "100%" }}>
-          <div className="p-2" style={{ marginLeft: "20px" }}>
-            <h5>Resumen año actual comparado con año anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
-          </div>
+          <div style={{ width: "1170px" }}>
+            <div className="row">
+              <div className="col-12 col-lg-8">
 
-          <div className="container-fluid">
-            <div className="row p-4">
-              {/* Columns with data */}
-              {[...Array(3)].map((_, idx) => (
-                <div key={idx} className="col-12 col-md-4 d-flex" style={{ gap: "15px" }}>
-                  <div>
-                    <div>2021</div>
-                    <div>2020</div>
-                    <div className="text-danger">period 8-2021</div>
-                    <div>period 8-2021</div>
+                <Card className="w-100" >
+                  <div className="p-2" style={{ marginLeft: "20px" }}>
+                    <h5>Resumen año actual comparado con año anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
                   </div>
-                  <div>
-                    <div>20233231</div>
-                    <div>2023433220</div>
-                    <div className="text-danger">999921</div>
-                    <div>00987771</div>
+
+                  <div className="container-fluid">
+                    <div className="row p-4">
+                      {[...Array(3)].map((_, idx) => (
+                        <div key={idx} className="col-12 col-md-4 d-flex" style={{ gap: "15px" }}>
+                          <div>
+                            <div>2021</div>
+                            <div>2020</div>
+                            <div className="text-danger">period 8-2021</div>
+                            <div>period 8-2021</div>
+                          </div>
+                          <div>
+                            <div>20233231</div>
+                            <div>2023433220</div>
+                            <div className="text-danger">999921</div>
+                            <div>00987771</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
+
+                  <Box sx={{ pt: 1, pr: 2 }}>
+                    <IncomeAreaChart slot={slot} />
+                  </Box>
+                </Card>
+
+              </div>
+
+              <div className="col-12 col-lg-4 mt-3 mt-lg-0 mr-4">
+                <div >
+                  <label className="fs-6 fw-bold">Reporting balance <br /> Año actual</label>
+
+                  {[
+                    { title: "Retenciones", details: ["Trimestre actual T3 -1.772,90", "Total año -1.772,90"] },
+                    { title: "IVA Repercutido -13.178,987", details: ["IVA Soportado -13.178,987", "IVA compensar 0,00", "Resultado T3 7.426,81"], danger: true },
+                    { title: "Lunes, 30 De Agosto De 2021", details: ["Sin eventos"], danger: true }
+                  ].map((card, idx) => (
+                    <Card key={idx} className="p-4 w-100 mt-4" >
+                      <div>{card.title}</div>
+                      {card.details.map((detail, dIdx) => (
+                        <div key={dIdx} className={dIdx === card.details.length - 1 && card.danger ? "text-danger" : ""}>
+                          {detail}
+                        </div>
+                      ))}
+                    </Card>
+                  ))}
+
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
-          <Box sx={{ pt: 1, pr: 2 }}>
-            <IncomeAreaChart slot={slot} />
-          </Box>
-        </Card>
-        
-      </div>
-
-      {/* Right Column with Small Cards */}
-      <div className="col-12 col-lg-4 mt-3 mt-lg-0">
-        <div className="d-flex flex-column gap-3">
-          <label className="fs-6 fw-bold">Reporting balance <br /> Año actual</label>
-
-          {[ 
-            { title: "Retenciones", details: ["Trimestre actual T3 -1.772,90", "Total año -1.772,90"] },
-            { title: "IVA Repercutido -13.178,987", details: ["IVA Soportado -13.178,987", "IVA compensar 0,00", "Resultado T3 7.426,81"], danger: true },
-            { title: "Lunes, 30 De Agosto De 2021", details: ["Sin eventos"], danger: true }
-          ].map((card, idx) => (
-            <Card key={idx} className="p-4" style={{ width: "100%", maxWidth: "250px" }}>
-              <div>{card.title}</div>
-              {card.details.map((detail, dIdx) => (
-                <div key={dIdx} className={dIdx === card.details.length - 1 && card.danger ? "text-danger" : ""}>
-                  {detail}
-                </div>
-              ))}
-            </Card>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</TabPanel>
+        </TabPanel>
 
 
       </TabContext>

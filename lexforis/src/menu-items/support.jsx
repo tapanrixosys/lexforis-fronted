@@ -23,7 +23,7 @@ const support = {
     },
     {
       id: 'Traducciones',
-      title: 'Traducciones',
+      title: 'Traducciones', 
       type: 'item',
       url: '/translations',
       icon: icons.QuestionOutlined
