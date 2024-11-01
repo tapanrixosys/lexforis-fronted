@@ -457,15 +457,15 @@ export default function LabTabs() {
 
         <TabPanel value="3">
 
-          <div style={{ width: "1170px" }}>
+          <div style={{ width: "1170px" }} className='mt-4'>
             <div className="row">
               <div className="col-12 col-lg-8">
 
                 <Card className="w-100" >
                   <div className="p-2" style={{ marginLeft: "20px" }}>
                     <h5>Resumen año actual comparado con año anterior <br /><p>CETA IT Lex International Law S.L.P.</p></h5>
-                  </div>
-
+                  </div> 
+                  
                   <div className="container-fluid">
                     <div className="row p-4">
                       {[...Array(3)].map((_, idx) => (
@@ -486,11 +486,12 @@ export default function LabTabs() {
                       ))}
                     </div>
                   </div>
-
+          
                   <Box sx={{ pt: 1, pr: 2 }}>
                     <IncomeAreaChart slot={slot} />
-                  </Box>
-                </Card>
+                  </Box> 
+
+                </Card> 
 
               </div>
 
